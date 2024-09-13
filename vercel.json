@@ -2,15 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/main.ts",
+      "src": "api/serverless.ts",
       "use": "@vercel/node",
-      "config": { "includeFiles": ["package.json", "tsconfig.json", "dist/**"] }
+      "config": {
+        "includeFiles": ["package.json", "tsconfig.json", "dist/**"]
+      }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "src/main.ts"
+      "src": "/graphql",
+      "dest": "/api/serverless"
     }
   ]
 }
