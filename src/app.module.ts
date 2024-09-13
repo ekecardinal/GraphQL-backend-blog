@@ -31,7 +31,7 @@ import { PrismaService } from './prisma.service';
       introspection: true,
       context: ({ req, res }) => ({ req, res }),
     }),
-    ConfigModule.forRoot({}),
+    ConfigModule.forRoot({ envFilePath: '.env', isGlobal: true }),
     // PostModule,
     // CommentModule,
     // LikeModule,
