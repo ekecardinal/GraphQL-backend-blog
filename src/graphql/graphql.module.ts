@@ -13,10 +13,10 @@ import { UserService } from 'src/user/user.service';
 
 @Module({
   imports: [
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'), // This points to the 'public' folder where your static files are located
-      serveRoot: '/', // This means files will be available under 'http://localhost:3001/files/'
-    }),
+    // ServeStaticModule.forRoot({
+    //   rootPath: join(__dirname, '..', 'public'), // This points to the 'public' folder where your static files are located
+    //   serveRoot: '/', // This means files will be available under 'http://localhost:3001/files/'
+    // }),
     AuthModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
